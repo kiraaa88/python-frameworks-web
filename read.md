@@ -10,6 +10,6 @@ CSS-фреймворк: Bootstrap 5.3.3.
 Документация: https://getbootstrap.com/docs/5.3/  
 Репозиторий фреймворка: https://github.com/twbs/bootstrap
 
-Прямая ссылка на сайт GitHub Pages: ДОБАВИТЬ ПОСЛЕ ПУБЛИКАЦИИ.
+Прямая ссылка на сайт GitHub Pages: https://kiraaa88.github.io/python-frameworks-web/
 
-Ссылка на GitHub-репозиторий проекта: ДОБАВИТЬ АДРЕС РЕПОЗИТОРИЯ.
+Ссылка на GitHub-репозиторий проекта: https://github.com/kiraaa88/python-frameworks-web
