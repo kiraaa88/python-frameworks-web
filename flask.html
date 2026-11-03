@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Flask — лёгкий и гибкий Python-фреймворк для веб-разработки.">
+
+    <title>Flask — PyWeb</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<header class="site-header sticky-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand site-logo" href="index.html">
+                <span class="logo-icon">
+                    <i class="bi bi-code-slash"></i>
+                </span>
+                <span>PyWeb</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+
+                    <!-- Фреймворки -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="frameworksDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Фреймворки
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="frameworksDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="django.html">
+                                    Django
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="flask.html">
+                                    Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="fastapi.html">
+                                    FastAPI
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">
+                            Сравнение
+                        </a>
+                    </li>
+
+                    <!-- Обучение -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="learningDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Обучение
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="learningDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="choice.html">
+                                    Как выбрать?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="getting-started.html">
+                                    С чего начать
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="examples.html">
+                                    Примеры
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">
+                            Ресурсы
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<a class="visually-hidden-focusable skip-link" href="#mainContent">Перейти к содержимому</a>
+<main id="mainContent">
+
+    <!-- PAGE HERO -->
+
+    <section class="framework-page-hero flask-page-hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="hero-badge">
+                        PYTHON WEB FRAMEWORK
+                    </span>
+
+                    <h1>
+                        Flask
+                    </h1>
+
+                    <p>
+                        Лёгкий и гибкий микрофреймворк Python,
+                        предоставляющий разработчику свободу выбора
+                        компонентов приложения.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end">
+
+                    <div class="framework-big-letter">
+                        F
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN CONTENT -->
+
+    <section class="section-padding">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- CONTENT -->
+
+                <div class="col-lg-8">
+
+                    <article>
+
+                        <!-- OVERVIEW -->
+
+                        <section id="overview" class="content-section">
+
+                            <span class="section-label">
+                                OVERVIEW
+                            </span>
+
+                            <h2>
+                                Что такое Flask?
+                            </h2>
+
+                            <p>
+                                Flask — это лёгкий веб-фреймворк для Python,
+                                предназначенный для создания веб-приложений
+                                и API. Он относится к категории
+                                микрофреймворков.
+                            </p>
+
+                            <p>
+                                В отличие от Django, Flask предоставляет
+                                разработчику минимальный набор компонентов.
+                                Дополнительные возможности подключаются
+                                отдельно в зависимости от требований проекта.
+                            </p>
+
+                            <p>
+                                Такой подход позволяет разработчику самостоятельно
+                                выбирать архитектуру приложения, библиотеки
+                                для работы с базами данных, аутентификацию
+                                и другие компоненты.
+                            </p>
+
+                        </section>
+
+
+                        <!-- FEATURES -->
+
+                        <section id="features" class="content-section">
+
+                            <span class="section-label">
+                                FEATURES
+                            </span>
+
+                            <h2>
+                                Основные особенности
+                            </h2>
+
+                            <div class="row g-3 mt-2">
+
+                                <div class="col-md-6">
+
+                                    <div class="mini-feature">
+
+                                        <i class="bi bi-feather"></i>
+
+                                        <div>
+
+                                            <h3>Минимализм</h3>
+
+                                            <p>
+                                                Небольшое ядро позволяет
+                                                начать разработку с минимальным
+                                                количеством компонентов.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="mini-feature">
+
+                                        <i class="bi bi-sliders"></i>
+
+                                        <div>
+
+                                            <h3>Гибкость</h3>
+
+                                            <p>
+                                                Разработчик самостоятельно
+                                                выбирает дополнительные
+                                                библиотеки и инструменты.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="mini-feature">
+
+                                        <i class="bi bi-puzzle"></i>
+
+                                        <div>
+
+                                            <h3>Расширения</h3>
+
+                                            <p>
+                                                Функциональность Flask можно
+                                                расширять с помощью специальных
+                                                расширений.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="mini-feature">
+
+                                        <i class="bi bi-rocket-takeoff"></i>
+
+                                        <div>
+
+                                            <h3>Быстрый старт</h3>
+
+                                            <p>
+                                                Простейшее приложение можно
+                                                создать всего за несколько
+                                                строк Python-кода.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- ARCHITECTURE -->
+
+                        <section id="architecture" class="content-section">
+
+                            <span class="section-label">
+                                ARCHITECTURE
+                            </span>
+
+                            <h2>
+                                Как устроен Flask?
+                            </h2>
+
+                            <p>
+                                Flask использует минималистичный подход.
+                                Основой приложения является объект Flask,
+                                который отвечает за обработку маршрутов
+                                и HTTP-запросов.
+                            </p>
+
+                            <div class="architecture-list">
+
+                                <div class="architecture-item">
+
+                                    <span class="architecture-number">
+                                        01
+                                    </span>
+
+                                    <div>
+
+                                        <h3>Route</h3>
+
+                                        <p>
+                                            Определяет URL-адрес и функцию,
+                                            которая должна быть вызвана
+                                            при соответствующем запросе.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="architecture-item">
+
+                                    <span class="architecture-number">
+                                        02
+                                    </span>
+
+                                    <div>
+
+                                        <h3>View Function</h3>
+
+                                        <p>
+                                            Обрабатывает запрос пользователя
+                                            и формирует HTTP-ответ.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="architecture-item">
+
+                                    <span class="architecture-number">
+                                        03
+                                    </span>
+
+                                    <div>
+
+                                        <h3>Extension</h3>
+
+                                        <p>
+                                            Дополнительные библиотеки позволяют
+                                            добавить работу с базами данных,
+                                            авторизацию и другие возможности.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- CODE -->
+
+                        <section id="code" class="content-section">
+
+                            <span class="section-label">
+                                CODE EXAMPLE
+                            </span>
+
+                            <h2>
+                                Пример Flask-приложения
+                            </h2>
+
+                            <p>
+                                Минимальное Flask-приложение может выглядеть
+                                следующим образом:
+                            </p>
+
+                            <div class="code-example">
+
+<pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Hello, Flask!"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- PROS CONS -->
+
+                        <section id="pros" class="content-section">
+
+                            <div class="row g-4">
+
+                                <div class="col-md-6">
+
+                                    <div class="pros-card">
+
+                                        <h3>
+                                            <i class="bi bi-check-circle"></i>
+                                            Преимущества
+                                        </h3>
+
+                                        <ul>
+
+                                            <li>
+                                                Простота изучения
+                                            </li>
+
+                                            <li>
+                                                Минималистичная архитектура
+                                            </li>
+
+                                            <li>
+                                                Высокая гибкость
+                                            </li>
+
+                                            <li>
+                                                Быстрое создание небольших
+                                                приложений
+                                            </li>
+
+                                            <li>
+                                                Большое количество расширений
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="cons-card">
+
+                                        <h3>
+                                            <i class="bi bi-dash-circle"></i>
+                                            Недостатки
+                                        </h3>
+
+                                        <ul>
+
+                                            <li>
+                                                Меньше встроенных возможностей
+                                            </li>
+
+                                            <li>
+                                                Архитектуру необходимо
+                                                продумывать самостоятельно
+                                            </li>
+
+                                            <li>
+                                                Дополнительные компоненты
+                                                требуют отдельных библиотек
+                                            </li>
+
+                                            <li>
+                                                Для крупных проектов может
+                                                потребоваться больше настроек
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </article>
+
+                </div>
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="col-lg-4">
+
+                    <div class="sidebar-card">
+
+                        <h3>
+                            <i class="bi bi-list-ul"></i>
+                            На этой странице
+                        </h3>
+
+                        <ul class="sidebar-list">
+
+                            <li>
+                                <a href="#overview">
+                                    Что такое Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#features">
+                                    Особенности
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#architecture">
+                                    Архитектура
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#code">
+                                    Пример кода
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#pros">
+                                    Преимущества и недостатки
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="sidebar-card">
+
+                        <h3>
+                            <i class="bi bi-link-45deg"></i>
+                            Полезные ссылки
+                        </h3>
+
+                        <ul class="sidebar-list">
+
+                            <li>
+
+                                <a
+                                    href="https://flask.palletsprojects.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Официальный сайт
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                    href="https://flask.palletsprojects.com/en/stable/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Документация
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a
+                                    href="https://github.com/pallets/flask"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="sidebar-card sidebar-highlight">
+
+                        <span>
+                            СОВЕТ
+                        </span>
+
+                        <h3>
+                            Когда выбрать Flask?
+                        </h3>
+
+                        <p>
+                            Flask хорошо подходит для небольших приложений,
+                            прототипов, учебных проектов и ситуаций,
+                            когда разработчику нужна максимальная гибкость.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- О сайте -->
+            <div class="col-lg-5">
+                <h3>
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    PyWeb
+                </h3>
+
+                <p>
+                    Учебный сайт о Python-фреймворках
+                    для веб-разработки.
+                </p>
+
+                <a href="about.html">О проекте</a>
+            </div>
+
+            <!-- Навигация -->
+            <div class="col-sm-6 col-lg-3">
+                <h4>Навигация</h4>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="django.html">Django</a></li>
+                    <li><a href="flask.html">Flask</a></li>
+                    <li><a href="fastapi.html">FastAPI</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="choice.html">Как выбрать фреймворк</a></li>
+                    <li><a href="getting-started.html">С чего начать</a></li>
+                    <li><a href="examples.html">Примеры</a></li>
+                    <li><a href="resources.html">Ресурсы</a></li>
+                </ul>
+            </div>
+
+            <!-- Технологии и авторские права -->
+            <div class="col-sm-6 col-lg-4">
+                <h4>Технологии</h4>
+
+                <p>
+                    HTML5 · CSS3 · Bootstrap · JavaScript · Python
+                </p>
+                <p>Автор: Косолапова Карина Андреевна, 141-ПМо.<br>
+                    <a href="https://github.com/kiraaa88" target="_blank" rel="noopener noreferrer">Связаться с автором через GitHub</a>
+                </p>
+
+                <p class="small mb-0">
+                    © <span id="currentYear">2026</span> PyWeb.
+                    Учебный проект.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="js/script.min.js"></script>
+
+</body>
+</html>

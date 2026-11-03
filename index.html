@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="PyWeb — учебный сайт о Python-фреймворках Django, Flask и FastAPI для веб-разработки.">
+
+    <meta name="keywords"
+          content="Python, Django, Flask, FastAPI, Web-разработка, Bootstrap">
+
+    <title>PyWeb — Python-фреймворки для Web-разработки</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header sticky-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <!-- Логотип -->
+            <a class="navbar-brand site-logo" href="index.html">
+                <span class="logo-icon">
+                    <i class="bi bi-code-slash"></i>
+                </span>
+                <span>PyWeb</span>
+            </a>
+
+            <!-- Кнопка мобильного меню -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Навигация -->
+            <div class="collapse navbar-collapse" id="mainNavigation">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+
+                    <!-- Фреймворки -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="frameworksDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Фреймворки
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="frameworksDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="django.html">
+                                    Django
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="flask.html">
+                                    Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="fastapi.html">
+                                    FastAPI
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">
+                            Сравнение
+                        </a>
+                    </li>
+
+                    <!-- Обучение -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="learningDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Обучение
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="learningDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="choice.html">
+                                    Как выбрать?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="getting-started.html">
+                                    С чего начать
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="examples.html">
+                                    Примеры
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">
+                            Ресурсы
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+
+<a class="visually-hidden-focusable skip-link" href="#mainContent">Перейти к содержимому</a>
+<main id="mainContent">
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <!-- Текст -->
+                <div class="col-lg-7">
+                    <span class="hero-badge">
+                        <i class="bi bi-code-slash"></i>
+                        Python Web Development
+                    </span>
+
+                    <h1 class="hero-title">
+                        Python-фреймворки
+                        <span>для Web-разработки</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Изучаем три популярных инструмента для создания
+                        современных веб-приложений: Django, Flask и FastAPI.
+                        Разбираемся в их возможностях и выбираем подходящий
+                        инструмент для своих задач.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="comparison.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-bar-chart"></i>
+                            Сравнить фреймворки
+                        </a>
+
+                        <a href="#frameworks" class="btn btn-outline-light btn-lg">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Адаптивное изображение -->
+                <div class="col-lg-5">
+                    <img
+                        src="images/python-web-768.webp"
+                        srcset="
+                            images/python-web-480.webp 480w,
+                            images/python-web-768.webp 768w,
+                            images/python-web-1200.webp 1200w
+                        "
+                        sizes="(max-width: 991px) 100vw, 42vw"
+                        alt="Иллюстрация разработки веб-приложений на Python"
+                        title="Python Web Development"
+                        class="img-fluid rounded-4 shadow-sm"
+                        width="1200"
+                        height="800"
+                    >
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОЧЕМУ PYTHON -->
+    <section class="about-section section-padding">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <span class="section-label">WEB DEVELOPMENT</span>
+
+                <h2>Почему Python?</h2>
+
+                <p>
+                    Python подходит для создания веб-приложений,
+                    API и серверных систем. Его читаемый синтаксис,
+                    развитая экосистема и большое сообщество помогают
+                    разработчикам решать разнообразные задачи.
+                </p>
+            </div>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+
+                        <h3>Простота</h3>
+
+                        <p>
+                            Читаемый синтаксис позволяет быстрее писать,
+                            понимать и поддерживать код веб-приложений.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-boxes"></i>
+                        </div>
+
+                        <h3>Большая экосистема</h3>
+
+                        <p>
+                            Библиотеки и готовые инструменты упрощают
+                            работу с базами данных, API и веб-сервисами.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <h3>Сообщество</h3>
+
+                        <p>
+                            Документация, обучающие материалы и открытые
+                            проекты помогают осваивать новые технологии.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FRAMEWORKS ================= -->
+
+    <section id="frameworks" class="frameworks-section section-padding">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-label">
+                    FRAMEWORKS
+                </span>
+
+                <h2>
+                    Три инструмента
+                </h2>
+
+                <p>
+                    Каждый из рассматриваемых фреймворков подходит
+                    для разных задач веб-разработки.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4 mt-4">
+
+
+                <!-- DJANGO -->
+
+                <div class="col-lg-4">
+
+                    <article class="framework-card">
+
+                        <div class="framework-card-header django-color">
+                            <span class="framework-letter">D</span>
+                        </div>
+
+                        <div class="framework-card-body">
+
+                            <h3>Django</h3>
+
+                            <p>
+                                Полноценный веб-фреймворк с большим количеством
+                                встроенных инструментов.
+                            </p>
+
+                            <ul class="framework-list">
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Архитектура MVT
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    ORM
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Административная панель
+                                </li>
+
+                            </ul>
+
+                            <a href="django.html" class="btn btn-outline-primary">
+                                Подробнее
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- FLASK -->
+
+                <div class="col-lg-4">
+
+                    <article class="framework-card">
+
+                        <div class="framework-card-header flask-color">
+                            <span class="framework-letter">F</span>
+                        </div>
+
+                        <div class="framework-card-body">
+
+                            <h3>Flask</h3>
+
+                            <p>
+                                Лёгкий микрофреймворк, предоставляющий
+                                разработчику больше свободы.
+                            </p>
+
+                            <ul class="framework-list">
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Минималистичный подход
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Гибкая архитектура
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Простое начало
+                                </li>
+
+                            </ul>
+
+                            <a href="flask.html" class="btn btn-outline-primary">
+                                Подробнее
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- FASTAPI -->
+
+                <div class="col-lg-4">
+
+                    <article class="framework-card">
+
+                        <div class="framework-card-header fastapi-color">
+                            <span class="framework-letter">F</span>
+                        </div>
+
+                        <div class="framework-card-body">
+
+                            <h3>FastAPI</h3>
+
+                            <p>
+                                Современный фреймворк для создания быстрых
+                                API с поддержкой асинхронного программирования.
+                            </p>
+
+                            <ul class="framework-list">
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Высокая производительность
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Async / Await
+                                </li>
+
+                                <li>
+                                    <i class="bi bi-check-circle"></i>
+                                    Автодокументация API
+                                </li>
+
+                            </ul>
+
+                            <a href="fastapi.html" class="btn btn-outline-primary">
+                                Подробнее
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SIDEBAR + CONTENT ================= -->
+
+    <section class="info-section section-padding">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Основной контент -->
+
+                <div class="col-lg-8">
+
+                    <article>
+
+                        <span class="section-label">
+                            PYTHON WEB
+                        </span>
+
+                        <h2>
+                            Как выбрать фреймворк?
+                        </h2>
+
+                        <p>
+                            Выбор инструмента зависит от особенностей проекта,
+                            требований к производительности, архитектуре
+                            приложения и опыту команды.
+                        </p>
+
+                        <p>
+                            Django предоставляет большое количество
+                            готовых компонентов и подходит для разработки
+                            полноценных веб-приложений. Flask ориентирован
+                            на минималистичный подход и позволяет самостоятельно
+                            выбирать дополнительные компоненты.
+                        </p>
+
+                        <p>
+                            FastAPI ориентирован прежде всего на создание
+                            современных API и активно использует возможности
+                            асинхронного программирования Python.
+                        </p>
+
+                        <a href="choice.html" class="btn btn-primary">
+                            Подробнее о выборе
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="col-lg-4">
+
+                    <div class="sidebar-card">
+
+                        <h3>
+                            <i class="bi bi-compass"></i>
+                            Навигация
+                        </h3>
+
+                        <ul class="sidebar-list">
+
+                            <li>
+                                <a href="django.html">
+                                    <i class="bi bi-chevron-right"></i>
+                                    Django
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="flask.html">
+                                    <i class="bi bi-chevron-right"></i>
+                                    Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="fastapi.html">
+                                    <i class="bi bi-chevron-right"></i>
+                                    FastAPI
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="comparison.html">
+                                    <i class="bi bi-chevron-right"></i>
+                                    Сравнение
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="resources.html">
+                                    <i class="bi bi-chevron-right"></i>
+                                    Полезные ресурсы
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- О сайте -->
+            <div class="col-lg-5">
+                <h3>
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    PyWeb
+                </h3>
+
+                <p>
+                    Учебный сайт о Python-фреймворках
+                    для веб-разработки.
+                </p>
+
+                <a href="about.html">О проекте</a>
+            </div>
+
+            <!-- Навигация -->
+            <div class="col-sm-6 col-lg-3">
+                <h4>Навигация</h4>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="django.html">Django</a></li>
+                    <li><a href="flask.html">Flask</a></li>
+                    <li><a href="fastapi.html">FastAPI</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="choice.html">Как выбрать фреймворк</a></li>
+                    <li><a href="getting-started.html">С чего начать</a></li>
+                    <li><a href="examples.html">Примеры</a></li>
+                    <li><a href="resources.html">Ресурсы</a></li>
+                </ul>
+            </div>
+
+            <!-- Технологии и авторские права -->
+            <div class="col-sm-6 col-lg-4">
+                <h4>Технологии</h4>
+
+                <p>
+                    HTML5 · CSS3 · Bootstrap · JavaScript · Python
+                </p>
+                <p>Автор: Косолапова Карина Андреевна, 141-ПМо.<br>
+                    <a href="https://github.com/kiraaa88" target="_blank" rel="noopener noreferrer">Связаться с автором через GitHub</a>
+                </p>
+
+                <p class="small mb-0">
+                    © <span id="currentYear">2026</span> PyWeb.
+                    Учебный проект.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Собственный JavaScript -->
+<script src="js/script.min.js"></script>
+
+</body>
+</html>

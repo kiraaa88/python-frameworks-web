@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Как выбрать Python-фреймворк для веб-разработки: Django, Flask или FastAPI.">
+    <meta name="keywords"
+          content="Django, Flask, FastAPI, выбор фреймворка, Python">
+
+    <title>Какой фреймворк выбрать — PyWeb</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Наши стили -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header sticky-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-code-slash"></i>
+                PyWeb
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+
+                                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+
+                    <!-- Фреймворки -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="frameworksDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Фреймворки
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="frameworksDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="django.html">
+                                    Django
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="flask.html">
+                                    Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="fastapi.html">
+                                    FastAPI
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">
+                            Сравнение
+                        </a>
+                    </li>
+
+                    <!-- Обучение -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="learningDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Обучение
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="learningDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="choice.html">
+                                    Как выбрать?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="getting-started.html">
+                                    С чего начать
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="examples.html">
+                                    Примеры
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">
+                            Ресурсы
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<a class="visually-hidden-focusable skip-link" href="#mainContent">Перейти к содержимому</a>
+<main id="mainContent">
+
+    <!-- HERO -->
+
+    <section class="framework-page-hero comparison-page-hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="badge bg-light text-dark mb-3">
+                        <i class="bi bi-signpost-2"></i>
+                        Навигатор
+                    </span>
+
+                    <h1 class="display-4 fw-bold">
+                        Какой фреймворк выбрать?
+                    </h1>
+
+                    <p class="lead mt-3">
+                        Выбор зависит от задач проекта, требуемой архитектуры,
+                        уровня контроля и необходимых возможностей.
+                        Разберём несколько типичных сценариев.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+
+                    <i class="bi bi-signpost-2 display-1"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="content-section">
+
+        <div class="container">
+<div class="row g-4 align-items-start">
+<div class="col-lg-8 page-content">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Быстрый выбор
+                </span>
+
+                <h2>
+                    Начните с задачи
+                </h2>
+
+                <p class="text-muted">
+                    Вместо того чтобы искать «лучший» фреймворк,
+                    сначала определите, что именно необходимо создать.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Django -->
+
+                <div class="col-lg-4">
+
+                    <article class="feature-card h-100">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <h3>
+                            Нужен полноценный сайт
+                        </h3>
+
+                        <p>
+                            Если приложение содержит пользователей,
+                            формы, базу данных, административную часть
+                            и большое количество страниц, обратите
+                            внимание на Django.
+                        </p>
+
+                        <div class="mt-auto pt-3">
+
+                            <span class="badge bg-primary">
+                                Django
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Flask -->
+
+                <div class="col-lg-4">
+
+                    <article class="feature-card h-100">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-puzzle"></i>
+                        </div>
+
+                        <h3>
+                            Нужна свобода
+                        </h3>
+
+                        <p>
+                            Если хочется самостоятельно выбирать
+                            библиотеки, структуру проекта и дополнительные
+                            компоненты, Flask предоставляет минималистичную
+                            основу для разработки.
+                        </p>
+
+                        <div class="mt-auto pt-3">
+
+                            <span class="badge bg-dark">
+                                Flask
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- FastAPI -->
+
+                <div class="col-lg-4">
+
+                    <article class="feature-card h-100">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+
+                        <h3>
+                            Нужен современный API
+                        </h3>
+
+                        <p>
+                            Если основной задачей является создание API,
+                            микросервиса или backend-компонента,
+                            стоит рассмотреть FastAPI.
+                        </p>
+
+                        <div class="mt-auto pt-3">
+
+                            <span class="badge bg-success">
+                                FastAPI
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        
+</div>
+<aside class="col-lg-4" aria-label="Связанные материалы">
+    <div class="sidebar-card sidebar-highlight page-sidebar">
+        <h2 class="h4">Полезные переходы</h2>
+        <p>Продолжите изучение темы на других страницах сайта.</p>
+        <ul class="sidebar-list"><li><a href="comparison.html">Сравнить возможности</a></li>
+<li><a href="examples.html">Посмотреть примеры</a></li>
+<li><a href="getting-started.html">Начать практику</a></li></ul>
+    </div>
+</aside>
+</div>
+</div>
+
+    </section>
+
+
+    <!-- SCENARIOS -->
+
+    <section class="content-section bg-light choice-scenarios">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Сценарии
+                </span>
+
+                <h2>
+                    Что вы собираетесь создавать?
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="mini-feature h-100">
+
+                        <i class="bi bi-shop"></i>
+
+                        <h3>
+                            Интернет-магазин
+                        </h3>
+
+                        <p>
+                            Каталог товаров, пользователи,
+                            корзина, заказы и база данных.
+                        </p>
+
+                        <strong>
+                            Django
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="mini-feature h-100">
+
+                        <i class="bi bi-server"></i>
+
+                        <h3>
+                            REST API
+                        </h3>
+
+                        <p>
+                            Backend для мобильного приложения
+                            или отдельного frontend.
+                        </p>
+
+                        <strong>
+                            FastAPI
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="mini-feature h-100">
+
+                        <i class="bi bi-lightbulb"></i>
+
+                        <h3>
+                            Учебный проект
+                        </h3>
+
+                        <p>
+                            Небольшое приложение для изучения
+                            основ веб-разработки.
+                        </p>
+
+                        <strong>
+                            Flask
+                        </strong>
+
+                    </article>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="mini-feature h-100">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                        <h3>
+                            Микросервис
+                        </h3>
+
+                        <p>
+                            Отдельный backend-сервис,
+                            взаимодействующий с другими системами.
+                        </p>
+
+                        <strong>
+                            FastAPI
+                        </strong>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUESTIONNAIRE -->
+
+    <section class="content-section">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="content-highlight">
+
+                        <div class="text-center mb-4">
+
+                            <i class="bi bi-question-circle display-4"></i>
+
+                            <h2 class="mt-3">
+                                Попробуйте определить свой вариант
+                            </h2>
+
+                            <p class="text-muted">
+                                Ответьте на несколько вопросов.
+                            </p>
+
+                        </div>
+
+
+                        <form id="frameworkQuiz">
+
+                            <div class="mb-4">
+
+                                <label for="projectType" class="form-label fw-bold">
+                                    1. Что вы хотите создать?
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="projectType"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Выберите вариант
+                                    </option>
+
+                                    <option value="website">
+                                        Полноценный веб-сайт
+                                    </option>
+
+                                    <option value="api">
+                                        API или backend
+                                    </option>
+
+                                    <option value="small">
+                                        Небольшое приложение
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="mb-4">
+
+                                <label for="priority" class="form-label fw-bold">
+                                    2. Что для вас важнее?
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="priority"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Выберите вариант
+                                    </option>
+
+                                    <option value="full">
+                                        Много готовых возможностей
+                                    </option>
+
+                                    <option value="flexibility">
+                                        Максимальная гибкость
+                                    </option>
+
+                                    <option value="speed">
+                                        Производительность API
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="d-grid">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    <i class="bi bi-magic"></i>
+                                    Получить рекомендацию
+                                </button>
+
+                            </div>
+
+                        </form>
+
+
+                        <div
+                            id="quizResult"
+                            class="alert alert-primary mt-4 d-none"
+                            role="alert"
+                        >
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL ADVICE -->
+
+    <section class="content-section bg-light">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-8">
+
+                    <h2>
+                        Главное — понимать задачу
+                    </h2>
+
+                    <p>
+                        Все три фреймворка позволяют создавать веб-приложения
+                        на Python, однако предлагают разные подходы.
+                    </p>
+
+                    <p>
+                        Django предоставляет большое количество готовых
+                        компонентов. Flask делает ставку на простоту
+                        и гибкость. FastAPI ориентирован на современные
+                        API и асинхронную разработку.
+                    </p>
+
+                    <p class="mb-0">
+                        Поэтому правильный выбор — это не соревнование
+                        фреймворков, а поиск инструмента, который лучше
+                        соответствует требованиям проекта.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="sidebar-card sidebar-highlight">
+
+                        <h3>
+                            Хотите сравнить?
+                        </h3>
+
+                        <p>
+                            Посмотрите подробную таблицу характеристик
+                            всех трёх фреймворков.
+                        </p>
+
+                        <a
+                            href="comparison.html"
+                            class="btn btn-primary"
+                        >
+                            К сравнению
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- О сайте -->
+            <div class="col-lg-5">
+                <h3>
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    PyWeb
+                </h3>
+
+                <p>
+                    Учебный сайт о Python-фреймворках
+                    для веб-разработки.
+                </p>
+
+                <a href="about.html">О проекте</a>
+            </div>
+
+            <!-- Навигация -->
+            <div class="col-sm-6 col-lg-3">
+                <h4>Навигация</h4>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="django.html">Django</a></li>
+                    <li><a href="flask.html">Flask</a></li>
+                    <li><a href="fastapi.html">FastAPI</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="choice.html">Как выбрать фреймворк</a></li>
+                    <li><a href="getting-started.html">С чего начать</a></li>
+                    <li><a href="examples.html">Примеры</a></li>
+                    <li><a href="resources.html">Ресурсы</a></li>
+                </ul>
+            </div>
+
+            <!-- Технологии и авторские права -->
+            <div class="col-sm-6 col-lg-4">
+                <h4>Технологии</h4>
+
+                <p>
+                    HTML5 · CSS3 · Bootstrap · JavaScript · Python
+                </p>
+                <p>Автор: Косолапова Карина Андреевна, 141-ПМо.<br>
+                    <a href="https://github.com/kiraaa88" target="_blank" rel="noopener noreferrer">Связаться с автором через GitHub</a>
+                </p>
+
+                <p class="small mb-0">
+                    © <span id="currentYear">2026</span> PyWeb.
+                    Учебный проект.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="js/script.min.js"></script>
+
+</body>
+</html>

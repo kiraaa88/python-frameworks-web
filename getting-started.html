@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Пошаговое руководство по началу веб-разработки на Python и изучению Django, Flask и FastAPI.">
+    <meta name="keywords"
+          content="Python Web, Django, Flask, FastAPI, обучение, веб-разработка">
+
+    <title>С чего начать — PyWeb</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Наши стили -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header sticky-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-code-slash"></i>
+                PyWeb
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavigation"
+                aria-controls="mainNavigation"
+                aria-expanded="false"
+                aria-label="Открыть меню"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+
+                    <!-- Фреймворки -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="frameworksDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Фреймворки
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="frameworksDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="django.html">
+                                    Django
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="flask.html">
+                                    Flask
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="fastapi.html">
+                                    FastAPI
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">
+                            Сравнение
+                        </a>
+                    </li>
+
+                    <!-- Обучение -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                        href="#"
+                        id="learningDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            Обучение
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="learningDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="choice.html">
+                                    Как выбрать?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="getting-started.html">
+                                    С чего начать
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="examples.html">
+                                    Примеры
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">
+                            Ресурсы
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<a class="visually-hidden-focusable skip-link" href="#mainContent">Перейти к содержимому</a>
+<main id="mainContent">
+
+    <!-- HERO -->
+
+    <section class="framework-page-hero getting-started-hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <span class="badge bg-light text-dark mb-3">
+                        <i class="bi bi-rocket-takeoff"></i>
+                        Начало работы
+                    </span>
+
+                    <h1 class="display-4 fw-bold">
+                        С чего начать?
+                    </h1>
+
+                    <p class="lead mt-3">
+                        Путь в Python Web-разработку можно разделить
+                        на несколько последовательных этапов.
+                        Необязательно изучать всё сразу.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-center mt-4 mt-lg-0">
+
+                    <i class="bi bi-rocket-takeoff display-1"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ROADMAP -->
+
+    <section class="content-section">
+
+        <div class="container">
+<div class="row g-4 align-items-start">
+<div class="col-lg-8 page-content">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Roadmap
+                </span>
+
+                <h2>
+                    Пошаговый путь
+                </h2>
+
+                <p class="text-muted">
+                    Последовательное изучение помогает не перегружать себя
+                    большим количеством новых технологий.
+                </p>
+
+            </div>
+
+
+            <div class="architecture-list">
+
+                <!-- STEP 1 -->
+
+                <article class="architecture-item">
+
+                    <div class="architecture-number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Изучите основы Python
+                        </h3>
+
+                        <p>
+                            Перед изучением веб-фреймворков желательно
+                            уверенно владеть базовым синтаксисом Python,
+                            функциями, классами, коллекциями,
+                            исключениями и модулями.
+                        </p>
+
+                        <ul>
+                            <li>переменные и типы данных;</li>
+                            <li>условия и циклы;</li>
+                            <li>функции;</li>
+                            <li>классы и ООП;</li>
+                            <li>работа с модулями и пакетами.</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STEP 2 -->
+
+                <article class="architecture-item">
+
+                    <div class="architecture-number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Разберитесь с HTML и CSS
+                        </h3>
+
+                        <p>
+                            Даже если backend является основной специализацией,
+                            понимание HTML и CSS помогает лучше представлять,
+                            как браузер взаимодействует с сервером.
+                        </p>
+
+                        <ul>
+                            <li>структура HTML-документа;</li>
+                            <li>семантические элементы;</li>
+                            <li>формы;</li>
+                            <li>CSS-селекторы;</li>
+                            <li>адаптивная вёрстка.</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STEP 3 -->
+
+                <article class="architecture-item">
+
+                    <div class="architecture-number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Изучите HTTP
+                        </h3>
+
+                        <p>
+                            Веб-разработка невозможна без понимания того,
+                            как браузер и сервер обмениваются данными.
+                        </p>
+
+                        <ul>
+                            <li>HTTP-запросы и ответы;</li>
+                            <li>методы GET, POST, PUT, DELETE;</li>
+                            <li>коды состояния HTTP;</li>
+                            <li>заголовки;</li>
+                            <li>JSON.</li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STEP 4 -->
+
+                <article class="architecture-item">
+
+                    <div class="architecture-number">
+                        4
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Выберите фреймворк
+                        </h3>
+
+                        <p>
+                            После базовой подготовки можно перейти
+                            к одному из Python-фреймворков.
+                        </p>
+
+                        <div class="row g-3 mt-2">
+
+                            <div class="col-md-4">
+
+                                <div class="mini-feature">
+
+                                    <h4>Django</h4>
+
+                                    <p>
+                                        Полноценные веб-приложения.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="mini-feature">
+
+                                    <h4>Flask</h4>
+
+                                    <p>
+                                        Простые и гибкие приложения.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <div class="mini-feature">
+
+                                    <h4>FastAPI</h4>
+
+                                    <p>
+                                        API и backend-сервисы.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STEP 5 -->
+
+                <article class="architecture-item">
+
+                    <div class="architecture-number">
+                        5
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Создайте небольшой проект
+                        </h3>
+
+                        <p>
+                            После изучения теории важно перейти к практике.
+                            Хорошим первым проектом может стать простой
+                            блог, список задач, каталог или REST API.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        
+</div>
+<aside class="col-lg-4" aria-label="Связанные материалы">
+    <div class="sidebar-card sidebar-highlight page-sidebar">
+        <h2 class="h4">Полезные переходы</h2>
+        <p>Продолжите изучение темы на других страницах сайта.</p>
+        <ul class="sidebar-list"><li><a href="choice.html">Выбрать фреймворк</a></li>
+<li><a href="examples.html">Перейти к примерам</a></li>
+<li><a href="resources.html">Открыть документацию</a></li></ul>
+    </div>
+</aside>
+</div>
+</div>
+
+    </section>
+
+
+    <!-- ENVIRONMENT -->
+
+    <section class="content-section bg-light">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Подготовка
+                </span>
+
+                <h2>
+                    Настройка окружения
+                </h2>
+
+                <p class="text-muted">
+                    Для начала работы достаточно Python и редактора кода.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-lg-6">
+
+                    <div class="content-section-card h-100">
+
+                        <h3>
+                            <i class="bi bi-terminal"></i>
+                            Создание виртуального окружения
+                        </h3>
+
+                        <p>
+                            Виртуальное окружение позволяет изолировать
+                            зависимости конкретного проекта.
+                        </p>
+
+                        <pre class="code-example"><code>python -m venv .venv</code></pre>
+
+                        <p>
+                            После создания окружения его необходимо
+                            активировать перед установкой библиотек.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="content-section-card h-100">
+
+                        <h3>
+                            <i class="bi bi-box-seam"></i>
+                            Установка Flask
+                        </h3>
+
+                        <p>
+                            Например, Flask можно установить с помощью
+                            менеджера пакетов pip.
+                        </p>
+
+                        <pre class="code-example"><code>pip install flask</code></pre>
+
+                        <p>
+                            Аналогичным способом устанавливаются
+                            необходимые зависимости других проектов.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FIRST PROJECT -->
+
+    <section class="content-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="text-uppercase small fw-bold">
+                        Первый проект
+                    </span>
+
+                    <h2 class="mt-2">
+                        Начните с простого приложения
+                    </h2>
+
+                    <p>
+                        Необязательно сразу создавать сложную систему.
+                        Лучше начать с небольшого приложения, в котором
+                        можно последовательно реализовать несколько
+                        основных возможностей.
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            Создать главную страницу.
+                        </li>
+
+                        <li>
+                            Добавить несколько маршрутов.
+                        </li>
+
+                        <li>
+                            Передавать данные в шаблон.
+                        </li>
+
+                        <li>
+                            Подключить базу данных.
+                        </li>
+
+                        <li>
+                            Добавить форму.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <pre class="code-example"><code>from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Hello, Python Web!"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section class="content-section bg-light">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Видеоматериал
+                </span>
+
+                <h2>
+                    Изучение веб-разработки на практике
+                </h2>
+
+                <p class="text-muted">
+                    Видео можно использовать как дополнительный источник
+                    при изучении Python и веб-фреймворков.
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-9">
+
+                    <div class="ratio ratio-16x9">
+
+                        <iframe
+                            src="https://rutube.ru/play/embed/1e0a838962058d812c89371f033fadd1/"
+                            title="Видео о веб-разработке на Python"
+                            allow="clipboard-write; autoplay"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHECKLIST -->
+
+    <section class="content-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <span class="text-uppercase small fw-bold">
+                    Чек-лист
+                </span>
+
+                <h2>
+                    Что нужно знать перед первым проектом?
+                </h2>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <div class="list-group">
+
+                        <div class="list-group-item d-flex gap-3 align-items-start">
+
+                            <i class="bi bi-check-circle-fill text-success"></i>
+
+                            <div>
+                                <strong>Python</strong>
+                                <p class="mb-0 text-muted">
+                                    Основы языка и объектно-ориентированное
+                                    программирование.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="list-group-item d-flex gap-3 align-items-start">
+
+                            <i class="bi bi-check-circle-fill text-success"></i>
+
+                            <div>
+                                <strong>HTML и CSS</strong>
+                                <p class="mb-0 text-muted">
+                                    Структура и оформление веб-страниц.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="list-group-item d-flex gap-3 align-items-start">
+
+                            <i class="bi bi-check-circle-fill text-success"></i>
+
+                            <div>
+                                <strong>HTTP</strong>
+                                <p class="mb-0 text-muted">
+                                    Принцип взаимодействия клиента и сервера.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="list-group-item d-flex gap-3 align-items-start">
+
+                            <i class="bi bi-check-circle-fill text-success"></i>
+
+                            <div>
+                                <strong>Git</strong>
+                                <p class="mb-0 text-muted">
+                                    Основы контроля версий проекта.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="list-group-item d-flex gap-3 align-items-start">
+
+                            <i class="bi bi-check-circle-fill text-success"></i>
+
+                            <div>
+                                <strong>Базы данных</strong>
+                                <p class="mb-0 text-muted">
+                                    Основы SQL и работа с данными.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="content-section bg-light">
+
+        <div class="container">
+
+            <div class="content-highlight">
+
+                <i class="bi bi-rocket-takeoff display-5"></i>
+
+                <h2 class="mt-3">
+                    Главное — начать с небольшого проекта
+                </h2>
+
+                <p>
+                    Теория становится намного понятнее, когда сразу
+                    применяется на практике. Выберите небольшой проект,
+                    который действительно интересно сделать.
+                </p>
+
+                <a href="choice.html" class="btn btn-primary">
+                    Выбрать фреймворк
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- О сайте -->
+            <div class="col-lg-5">
+                <h3>
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    PyWeb
+                </h3>
+
+                <p>
+                    Учебный сайт о Python-фреймворках
+                    для веб-разработки.
+                </p>
+
+                <a href="about.html">О проекте</a>
+            </div>
+
+            <!-- Навигация -->
+            <div class="col-sm-6 col-lg-3">
+                <h4>Навигация</h4>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="django.html">Django</a></li>
+                    <li><a href="flask.html">Flask</a></li>
+                    <li><a href="fastapi.html">FastAPI</a></li>
+                    <li><a href="comparison.html">Сравнение</a></li>
+                    <li><a href="choice.html">Как выбрать фреймворк</a></li>
+                    <li><a href="getting-started.html">С чего начать</a></li>
+                    <li><a href="examples.html">Примеры</a></li>
+                    <li><a href="resources.html">Ресурсы</a></li>
+                </ul>
+            </div>
+
+            <!-- Технологии и авторские права -->
+            <div class="col-sm-6 col-lg-4">
+                <h4>Технологии</h4>
+
+                <p>
+                    HTML5 · CSS3 · Bootstrap · JavaScript · Python
+                </p>
+                <p>Автор: Косолапова Карина Андреевна, 141-ПМо.<br>
+                    <a href="https://github.com/kiraaa88" target="_blank" rel="noopener noreferrer">Связаться с автором через GitHub</a>
+                </p>
+
+                <p class="small mb-0">
+                    © <span id="currentYear">2026</span> PyWeb.
+                    Учебный проект.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="js/script.min.js"></script>
+
+</body>
+</html>
